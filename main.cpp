@@ -68,7 +68,7 @@ float calcularRMS(uint16_t *datos, int longitud)
  
 void calcularDatos(uint16_t *datosV, uint16_t *datosI, int longitud, estructuraMedidas *medidas)
 {
-    retrun 0;
+   
 }  
 
 
