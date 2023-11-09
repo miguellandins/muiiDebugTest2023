@@ -28,8 +28,8 @@ Modificar el código para que la función se ejecute lo más rápido que se pued
 # Ejercicio 2
 
 La segunda función calcula varios parámetros eléctricos de la señal muestreada de la onda de tensión y de la onda de corriente.
-La señal de tensión proviene de un ADC de 16bits siendo las tensiones de referencia -3.3V y -3.3V
-La señal de corriente proviene de un ADC de 16 bits que mide corrientes entre -1A y 1A
+La señal de tensión proviene de un ADC de 16bits siendo las tensiones de referencia -400V y 400V, utilizando offset zero.
+La señal de corriente proviene de un ADC de 16 bits que mide corrientes entre -5A y 5A, utilizando offset zero.
 Los parámetros que se calculen hay que dejarlos en los campos de la estructura que se pase en la función
 
 ```
