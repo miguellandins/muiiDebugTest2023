@@ -1,8 +1,8 @@
-#include "mbed.h"
+#include "mbed.h" 
 #include "datos.h"
 #include "math.h"
  
-#define longitudTrama 500
+#define longitudTrama 200
  
 Timer timer;
 float resultado;
@@ -15,13 +15,13 @@ struct estructuraMedidas
    float potenciaActiva; 
    float potenciaReactiva;  
    float potenciaAparente;  
-   float energiaConsumida;
    float factorDePotencia;
+   float energiaConsumida;
 };
  
-float calcularRMS(int16_t *datos, int longitud);
+float calcularRMS(uint16_t *datos, int longitud);
  
-void calcularDatos(int16_t *datosV, int16_t *datosI, int longitud, estructuraMedidas *medidas);
+void calcularDatos(uint16_t *datosV, uint16_t *datosI, int longitud, estructuraMedidas *medidas);
  
  
 int main()
@@ -54,20 +54,22 @@ int main()
  
 
  //Esta función calcula el valor RMS
-float calcularRMS(int16_t *datos, int longitud)
+float calcularRMS(uint16_t *datos, int longitud)
 {
     float rms=0;
     float datoV;
     for (int i=0;i<longitud;i++){
-        datoV=datos[i]/32768*3.3;
-        rms+=datoV*datoV;
+        datoV=(((float)datos[i])/65536*800.0)-400.0;
+        rms+=pow(datoV,2);
     }
     rms=sqrt(rms/longitud);
     return rms;
 }
  
-void calcularDatos(int16_t *datosV, int16_t *datosI, int longitud, estructuraMedidas *medidas)
+void calcularDatos(uint16_t *datosV, uint16_t *datosI, int longitud, estructuraMedidas *medidas)
 {
-    
+    retrun 0;
 }  
+
+
 
