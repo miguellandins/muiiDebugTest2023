@@ -37,7 +37,7 @@ int main() {
   estructuraMedidas medidas;
   medidas.energiaConsumida = 0;
 
-  timer.reset();
+  timer.reset(); //jggjhgjh
   timer.start();
   calcularDatos(datosV, datosI, longitudTrama, &medidas);
   timer.stop();
