@@ -1,4 +1,4 @@
-% hola
+% hola Mundo
 F0=50;      % Frecuencia fundamental 50Hz
 T0=1/F0;    % Periodo, 20ms
 Fs=F0*20;   % Frecuencia de muestreo, 20 muestras por periodo
