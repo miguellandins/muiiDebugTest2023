@@ -27,7 +27,7 @@ void calcularDatos(uint16_t *datosV, uint16_t *datosI, int longitud,
 
 int main() {
 
-  timer.reset();
+  timer.reset(); //Reinicia el temporizado
   timer.start();
   resultado = calcularRMS(datos, longitudTrama);
   timer.stop();
